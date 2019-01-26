@@ -7,14 +7,16 @@ public class TwoPlayerCameraLogic : MonoBehaviour
 
     public float zoomDistance = 1.5f;
     public float followSlerpSpeed = .8f;
-    public bool runTwoPlayerCameraLogic = false;
+    public bool runTwoPlayerCameraLogic = true;
     public Transform player1Transform;
     public Transform player2Transform;
 
     private Camera thisCam;
+    private Vector3 originalPosOfCamera; //made to keep Y and Z of camera from inspector.
 
     void Start()
     {
+        originalPosOfCamera = transform.position;
         thisCam = GetComponent<Camera>();
     }
 
@@ -42,6 +44,16 @@ public class TwoPlayerCameraLogic : MonoBehaviour
     //   }
 
         camera.transform.position = Vector3.Slerp(camera.transform.position, targetTransform, followSlerpSpeed);
+        camera.transform.position = new Vector3(camera.transform.position.x, originalPosOfCamera.y, originalPosOfCamera.z);
+
+        if (camera.transform.position.x < -14.25f)
+        {
+            camera.transform.position = new Vector3(-14.25f, camera.transform.position.y, camera.transform.position.z);
+        }
+        else if (camera.transform.position.x > 14.25f)
+            {
+                camera.transform.position = new Vector3(14.25f, camera.transform.position.y, camera.transform.position.z);
+            }
 
         // Snap when close enough to prevent annoying slerp behavior
         if ((targetTransform - camera.transform.position).magnitude <= 0.05f)
