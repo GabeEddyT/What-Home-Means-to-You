@@ -103,16 +103,25 @@ public class PlayerMovement : MonoBehaviour
         if (!grounded && !fastFall && Input.GetKeyDown(buttonSuite.down))
         {
             fastFall = true;
-            physics.velocity = new Vector2(physics.velocity.x, 0);
+
+            if (physics.velocity.y > 0)
+            {
+                physics.velocity = new Vector2(physics.velocity.x, 0);
+            }
+          //  else if (physics.velocity.y > 0)
+          //  {
+          //  physics.velocity = new Vector2(physics.velocity.x, physics.velocity.y - 50);
+          //  }
+
         }
 
         if(physics.velocity.y > 0 && !Input.GetKey(buttonSuite.up)) //if player is no longer holding jump button
         {
             physics.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
-        else if(physics.velocity.y < 0 && fastFall) //if player has pressed fastfall
+        else if(/*physics.velocity.y < 0 && */fastFall) //if player has pressed fastfall
         {
-            physics.velocity += Vector2.up * Physics2D.gravity.y * (fastFallSpeed - 1) * Time.deltaTime;
+            physics.velocity += 2 * Vector2.up * Physics2D.gravity.y * (fastFallSpeed - 1) * Time.deltaTime;
         }
         else
         {
