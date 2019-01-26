@@ -392,6 +392,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 90832f20e7a75234ba87fa362cfc44cc, type: 2}
     - target: {fileID: 8627139149448695931, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
       propertyPath: m_Offset.x
@@ -2028,6 +2033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675519555916790971, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: groundRaycastDistance
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
