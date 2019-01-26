@@ -87,6 +87,10 @@ public class PlayerMovement : MonoBehaviour
         currentVelocity.y = physics.velocity.y;
 
         physics.velocity = currentVelocity;
+
+        GetComponent<Animator>().SetFloat("Speed", currentVelocity.x / 8);
+        GetComponent<Animator>().SetBool("Walking", currentVelocity.x != 0.0f);
+
     }
 
     void handleJump()

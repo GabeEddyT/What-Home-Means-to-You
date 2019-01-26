@@ -23,16 +23,16 @@ public class FlipSprite : MonoBehaviour
             if (physics.velocity.x < 0 && defaultRight)
             {
                 if (defaultRight)
-                    sprite.flipX = true;
-                else
                     sprite.flipX = false;
+                else
+                    sprite.flipX = true;
             }
             else
             {
                 if (defaultRight)
-                    sprite.flipX = false;
-                else
                     sprite.flipX = true;
+                else
+                    sprite.flipX = false;
             }
         }
     }
