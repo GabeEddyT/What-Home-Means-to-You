@@ -633,6 +633,7 @@ GameObject:
   - component: {fileID: 831679841}
   - component: {fileID: 831679840}
   - component: {fileID: 831679839}
+  - component: {fileID: 831679842}
   m_Layer: 9
   m_Name: Dresser
   m_TagString: Untagged
@@ -728,6 +729,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &831679842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831679838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76092265235197d4492d979651a82231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &851102415
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +752,7 @@ GameObject:
   - component: {fileID: 851102417}
   - component: {fileID: 851102416}
   - component: {fileID: 851102418}
+  - component: {fileID: 851102419}
   m_Layer: 9
   m_Name: BlueBed
   m_TagString: Untagged
@@ -834,6 +848,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.03, y: 0.73}
   m_EdgeRadius: 0
+--- !u!114 &851102419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851102415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76092265235197d4492d979651a82231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &981802747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1490,7 @@ GameObject:
   - component: {fileID: 1550154433}
   - component: {fileID: 1550154432}
   - component: {fileID: 1550154434}
+  - component: {fileID: 1550154435}
   m_Layer: 9
   m_Name: RedBed
   m_TagString: Untagged
@@ -1546,7 +1573,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.67}
+  m_Offset: {x: 0, y: 0.13648894}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1557,8 +1584,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.03, y: 1.68}
+  m_Size: {x: 5.03, y: 0.067322075}
   m_EdgeRadius: 0
+--- !u!114 &1550154435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550154431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76092265235197d4492d979651a82231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1728626287
 GameObject:
   m_ObjectHideFlags: 0
