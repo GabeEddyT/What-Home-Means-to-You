@@ -69,17 +69,7 @@
 					v2f OUT;
 					OUT.vertex = UnityObjectToClipPos(IN.vertex);
 					OUT.texcoord = IN.texcoord;
-					// OUT.color = _First_Swap;
-					// if(OUT.color.r == _First_Swap.r){
-					// 	OUT.color = _First_Replace;
-					// 	return OUT;
-					// }
-						OUT.color = float4(IN.color.r ,IN.color.r ,IN.color.r ,IN.color.r );
-					/*}
-					else
-					{
-						OUT.color = IN.color * _Color;
-					}*/
+					OUT.color = IN.color * _Color;
 					#ifdef PIXELSNAP_ON
 					OUT.vertex = UnityPixelSnap(OUT.vertex);
 					#endif
