@@ -55,11 +55,11 @@ public class PlayerMovement : MonoBehaviour
 
         int direction = 0;
 
-        if(Input.GetKey(buttonSuite.left))
+        if(Input.GetKey(buttonSuite.left) && !GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Throw"))
         {
             direction = -1;
         }
-        else if(Input.GetKey(buttonSuite.right))
+        else if(Input.GetKey(buttonSuite.right) && !GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Throw"))
         {
             direction = 1;
         }
@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
         physics.velocity = currentVelocity;
 
-        GetComponent<Animator>().SetFloat("Speed", currentVelocity.x / 8);
+        GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(currentVelocity.x / 8));
         GetComponent<Animator>().SetBool("Walking", currentVelocity.x != 0.0f);
 
     }
