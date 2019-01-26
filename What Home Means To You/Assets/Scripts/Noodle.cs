@@ -10,7 +10,7 @@ public class Noodle : MonoBehaviour
     public Slider BACSlider;
     public Text BACLabel;
     public float BloodAlcoholContent = .05f;
-    public float BACDecayRate = 0.00025f;
+    public float BACDecayRate = 0.004f;
     // Start is called before the first frame update
     void Start()
     {
