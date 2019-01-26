@@ -14,7 +14,8 @@ public class Noodle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        BACSlider.maxValue = Data.BAC_MAX;
+        BloodAlcoholContent = Data.BAC_MAX;
     }
 
     // Update is called once per frame
