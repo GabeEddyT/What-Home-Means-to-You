@@ -40,7 +40,16 @@ public class TwoPlayerCameraLogic : MonoBehaviour
        if (camera.orthographic)
        {
            // The camera's forward vector is irrelevant, only this size will matter
+           if (distance > 11)
+            {
+                distance = 11;
+            }
+           else if (distance < 6)
+            {
+                distance = 6;
+            }
            camera.orthographicSize = distance;
+            
        }
 
         camera.transform.position = Vector3.Slerp(camera.transform.position, targetTransform, followSlerpSpeed);
