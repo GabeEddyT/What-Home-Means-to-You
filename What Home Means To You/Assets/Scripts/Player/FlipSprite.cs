@@ -18,22 +18,31 @@ public class FlipSprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (physics.velocity.x != 0)
+        //if (Mathf.Abs(physics.velocity.x) != 0)
+        //{
+        //    if (physics.velocity.x < 0 && defaultRight)
+        //    {
+        //        if (defaultRight)
+        //            transform.rotation = Quaternion.Euler(0, 0, 0);
+        //        else
+        //            transform.rotation = Quaternion.Euler(0, 180, 0);
+        //    }
+        //    else
+        //    {
+        //        if (defaultRight)
+        //            transform.rotation = Quaternion.Euler(0, 180, 0);
+        //        else
+        //            transform.rotation = Quaternion.Euler(0, 0, 0);
+        //    }
+        //}
+
+        if (Input.GetKey(GetComponent<ControlButtons>().right))
         {
-            if (physics.velocity.x < 0 && defaultRight)
-            {
-                if (defaultRight)
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
-                else
-                    transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
-            else
-            {
-                if (defaultRight)
-                    transform.rotation = Quaternion.Euler(0, 180, 0);
-                else
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else if (Input.GetKey(GetComponent<ControlButtons>().left))
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 }
