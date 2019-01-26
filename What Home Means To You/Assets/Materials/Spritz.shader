@@ -5,8 +5,8 @@
 		[PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
 		_Color("Tint", Color) = (1,1,1,1)
 		_First_Swap("First_Swap",Color) = (0,0,1,1)
-		_First_Replace("First_Replace",Color) = (1,0,0,1)
-		_Second_Swap	("Second_Swap",Color) = (1,1,1,1)
+		_First_Replace("First_Replace",Color) = (1,1,1,1)
+		_Second_Swap	("Second_Swap",Color) = (1,0,0,1)
 		_Second_Replace	("Second_Replace",Color) = (1,1,1,1)
 		_Third_Swap		("Third_Swap",Color) = (0,1,0,1)
 		_Third_Replace	("Third_Replace",Color) = (1,1,1,1)
