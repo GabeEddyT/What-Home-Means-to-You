@@ -31,7 +31,10 @@ public class PlayerRageUI : MonoBehaviour
         RageText.text = "Rage: " + RageMeter.ToString("0.00") + " %";
         RageSlider.colors = new ColorBlock
         {
-            normalColor = gradient.Evaluate((Data.BAC_MAX - RageMeter) / Data.BAC_MAX),
+            normalColor = gradient.Evaluate(1 - ((Data.RAGE_MAX - RageMeter) / Data.RAGE_MAX)),
+            highlightedColor = gradient.Evaluate(1 - ((Data.RAGE_MAX - RageMeter) / Data.RAGE_MAX)),
+            disabledColor = gradient.Evaluate(1 - ((Data.RAGE_MAX - RageMeter) / Data.RAGE_MAX)),
+            pressedColor = gradient.Evaluate(1 - ((Data.RAGE_MAX - RageMeter) / Data.RAGE_MAX)),
             colorMultiplier = 1
         };
 
