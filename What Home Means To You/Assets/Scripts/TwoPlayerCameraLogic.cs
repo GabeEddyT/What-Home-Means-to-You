@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class TwoPlayerCameraLogic : MonoBehaviour
 {
 
@@ -14,6 +15,9 @@ public class TwoPlayerCameraLogic : MonoBehaviour
     private Camera thisCam;
     private Vector3 originalPosOfCamera; //made to keep Y and Z of camera from inspector.
     public bool triggerPlayerWonTest = false;
+
+    public Text player1WinText;
+    public Text player2WinText;
     void Start()
     {
         originalPosOfCamera = transform.position;
@@ -83,16 +87,26 @@ public class TwoPlayerCameraLogic : MonoBehaviour
         if (playerThatWon == 1)
         {
             player2Transform = player1Transform;
+            player1WinText.gameObject.SetActive(true);
             followSlerpSpeed /= 15;
         }
         else if (playerThatWon == 2)
         {
             player1Transform = player2Transform;
+            player2WinText.gameObject.SetActive(true);
             followSlerpSpeed /= 15f;
         }
         else
         {
             Debug.LogError("Invalid player winning INT");
         }
+        Invoke("RestartGame", 5f);
+    }
+    /// <summary>
+    /// TODO TO-DO to do -- make sure that the scene loading is right
+    /// </summary>
+    void RestartGame()
+    {
+        SceneManager.LoadScene(3);
     }
 }
