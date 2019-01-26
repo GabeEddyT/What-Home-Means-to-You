@@ -28,6 +28,9 @@ public class BACMeter : MonoBehaviour
         BACSlider.colors = new ColorBlock
         {
             normalColor = gradient.Evaluate((Data.BAC_MAX - BloodAlcoholContent) / Data.BAC_MAX),
+            disabledColor = gradient.Evaluate((Data.BAC_MAX - BloodAlcoholContent) / Data.BAC_MAX),
+            highlightedColor = gradient.Evaluate((Data.BAC_MAX - BloodAlcoholContent) / Data.BAC_MAX),
+            pressedColor = gradient.Evaluate((Data.BAC_MAX - BloodAlcoholContent) / Data.BAC_MAX),
             colorMultiplier = 1
         };
     }
