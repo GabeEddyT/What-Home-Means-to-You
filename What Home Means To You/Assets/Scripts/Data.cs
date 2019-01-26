@@ -9,4 +9,5 @@ public static class Data
 {
     public static float BAC_MAX = .40f;
     public static float TURBO_SETTING = 1.0f;
+    public static float RAGE_MAX = 100.0f;
 }
