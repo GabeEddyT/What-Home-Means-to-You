@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/BAC Adjust Screen.unity
+    guid: 9e3fc6c7a9289a54dab877196229690c
   m_configObjects: {}
