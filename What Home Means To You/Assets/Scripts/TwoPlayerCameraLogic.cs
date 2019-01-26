@@ -36,24 +36,29 @@ public class TwoPlayerCameraLogic : MonoBehaviour
         float distance = (player1Transform.position - player2Transform.position).magnitude;
         Vector3 targetTransform = middle - camera.transform.forward * distance * zoomDistance;
 
-    //   // Adjust ortho size if we're using one of those
-    //   if (camera.orthographic)
-    //   {
-    //       // The camera's forward vector is irrelevant, only this size will matter
-    //       camera.orthographicSize = distance;
-    //   }
+       // Adjust ortho size if we're using one of those
+       if (camera.orthographic)
+       {
+           // The camera's forward vector is irrelevant, only this size will matter
+           camera.orthographicSize = distance;
+       }
 
         camera.transform.position = Vector3.Slerp(camera.transform.position, targetTransform, followSlerpSpeed);
-        camera.transform.position = new Vector3(camera.transform.position.x, originalPosOfCamera.y, originalPosOfCamera.z);
+        camera.transform.position = new Vector3(camera.transform.position.x, originalPosOfCamera.y, camera.transform.position.z);
 
         if (camera.transform.position.x < -14.25f)
         {
             camera.transform.position = new Vector3(-14.25f, camera.transform.position.y, camera.transform.position.z);
         }
         else if (camera.transform.position.x > 14.25f)
-            {
-                camera.transform.position = new Vector3(14.25f, camera.transform.position.y, camera.transform.position.z);
-            }
+        {
+            camera.transform.position = new Vector3(14.25f, camera.transform.position.y, camera.transform.position.z);
+        }
+
+        if (camera.transform.position.z > -10)
+         {
+                camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y, -10);
+         }
 
         // Snap when close enough to prevent annoying slerp behavior
         if ((targetTransform - camera.transform.position).magnitude <= 0.05f)
