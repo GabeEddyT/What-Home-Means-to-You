@@ -11,7 +11,7 @@ public class BACAdjustment : MonoBehaviour
     public Text BACSettingText;
     public Text SecondsText;
 
-    float currentSetting = .40f;
+    float currentSetting = Data.BAC_MAX;
     int currentIndex = 0;
     bool hitLastFrame = false;
     // Start is called before the first frame update
@@ -39,10 +39,5 @@ public class BACAdjustment : MonoBehaviour
         BACSettingText.text = currentSetting.ToString("0.00") + " %";
         SecondsText.text = "(" + (currentSetting / .004).ToString("0") + " seconds)";
         Data.BAC_MAX = currentSetting;
-    }
-
-    public void LoadScene(string scene)
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(scene);
     }
 }
