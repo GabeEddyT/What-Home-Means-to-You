@@ -24,7 +24,7 @@ public class BACMeter : MonoBehaviour
     {
         BloodAlcoholContent -= BACDecayRate * Time.unscaledDeltaTime;
         BACSlider.value = BloodAlcoholContent;
-        BACLabel.text = BloodAlcoholContent.ToString("0.000") + " %";
+        BACLabel.text = "BAC: " + BloodAlcoholContent.ToString("0.000") + " %";
         BACSlider.colors = new ColorBlock
         {
             normalColor = gradient.Evaluate((Data.BAC_MAX - BloodAlcoholContent) / Data.BAC_MAX),

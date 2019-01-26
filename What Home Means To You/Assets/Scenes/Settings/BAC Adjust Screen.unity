@@ -582,11 +582,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BACList:
   - 0.12
-  - 0.24
   - 0.18
-  - 0.4
+  - 0.24
   - 0.36
+  - 0.4
   - 0.48
+  - 0.6
+  - 0.72
+  - 0.8
   BACSettingText: {fileID: 1148566400}
   SecondsText: {fileID: 1667707314}
 --- !u!114 &1148566400
