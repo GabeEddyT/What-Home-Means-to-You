@@ -121,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
     {
         bool result = Physics2D.Raycast(transform.position, Vector3.down, groundRaycastDistance, groundCheckLayers.value);
 
-        Debug.Log(result);
+        //Debug.Log(result);
 
         return result;
     }
