@@ -94,9 +94,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96f4322e110e56645b6d8693edc3976a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 5
+  throwSpeed: 4
   spinSpeed: 0
   grabbable: 1
+  damage: 0
 --- !u!58 &5491622844142722745
 CircleCollider2D:
   m_ObjectHideFlags: 0

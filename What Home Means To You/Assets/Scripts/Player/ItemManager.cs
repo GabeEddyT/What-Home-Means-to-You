@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {
     public Transform Socket;
+    public bool canThrow = true;
     ControlButtons buttons;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class ItemManager : MonoBehaviour
 
     void CheckPickup()
     {
-        if (Input.GetKeyDown(buttons.pickupThrow))
+        if (canThrow && Input.GetKeyDown(buttons.pickupThrow))
         {
             try
             {// Check if holding an object

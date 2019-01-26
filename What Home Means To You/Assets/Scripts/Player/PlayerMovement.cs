@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     bool grounded;
 
     public bool fastFall = false;
+    public bool canMove = true;
     //float ;
     Rigidbody2D physics;
 
@@ -55,13 +56,16 @@ public class PlayerMovement : MonoBehaviour
 
         int direction = 0;
 
-        if(Input.GetKey(buttonSuite.left) && !GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Throw"))
+        if (canMove)
         {
-            direction = -1;
-        }
-        else if(Input.GetKey(buttonSuite.right) && !GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Throw"))
-        {
-            direction = 1;
+            if (Input.GetKey(buttonSuite.left) && !GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Throw"))
+            {
+                direction = -1;
+            }
+            else if (Input.GetKey(buttonSuite.right) && !GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Throw"))
+            {
+                direction = 1;
+            }
         }
 
         if (direction == 0) //if there was no direction of movement brake normally
@@ -95,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
 
     void handleJump()
     {
-        if(grounded && Input.GetKeyDown(buttonSuite.up))
+        if(canMove && grounded && Input.GetKeyDown(buttonSuite.up))
         {
             physics.velocity = Vector2.up * jumpSpeed;
         }
