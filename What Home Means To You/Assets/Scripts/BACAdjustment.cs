@@ -24,7 +24,7 @@ public class BACAdjustment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Horizontal") != 0)
+        if (Input.GetAxisRaw("Horizontal") != 0)
         {
             if (!hitLastFrame)
             {

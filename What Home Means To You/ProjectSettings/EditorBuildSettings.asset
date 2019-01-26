@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings/BAC Adjust Screen.unity
     guid: 9e3fc6c7a9289a54dab877196229690c
+  - enabled: 1
+    path: Assets/Scenes/Settings/Setting Screen.unity
+    guid: 0d7885f81f72dcf4bb56016b73208509
+  - enabled: 1
+    path: Assets/Scenes/Settings/Turbo Settings.unity
+    guid: fd59cf520afea904daa4cfdb9bde32e9
+  - enabled: 1
+    path: Assets/Scenes/_BedAndBreakfast.unity
+    guid: 71fd6748c614d7c4e8ed822e81b0a6b4
   m_configObjects: {}
