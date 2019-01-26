@@ -4,10 +4,14 @@
 	{
 		[PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
 		_Color("Tint", Color) = (1,1,1,1)
-		_First_Swap("First_Swap",Color) = (1,1,1,1)
-		_First_Replace("First_Replace",Color) = (1,1,1,1)
-		_Second_Swap("Second_Swap",Color) = (1,1,1,1)
-		_Second_Replace("Second_Replace",Color) = (1,1,1,1)
+		_First_Swap("First_Swap",Color) = (0,0,1,1)
+		_First_Replace("First_Replace",Color) = (1,0,0,1)
+		_Second_Swap	("Second_Swap",Color) = (1,1,1,1)
+		_Second_Replace	("Second_Replace",Color) = (1,1,1,1)
+		_Third_Swap		("Third_Swap",Color) = (0,1,0,1)
+		_Third_Replace	("Third_Replace",Color) = (1,1,1,1)
+		_Fourth_Swap	("Fourth_Swap",Color) = (1,1,0,1)
+		_Fourth_Replace	("Fourth_Replace",Color) = (1,1,1,1)
 		_SwapTex("Color Data", 2D) = "transparent" {}
 		[MaterialToggle] PixelSnap("Pixel snap", Float) = 0
 	}
@@ -55,6 +59,10 @@
 				fixed4 _First_Replace;
 				fixed4 _Second_Swap;
 				fixed4 _Second_Replace;
+				fixed4 _Third_Swap;
+				fixed4 _Third_Replace;
+				fixed4 _Fourth_Swap;
+				fixed4 _Fourth_Replace;
 
 				v2f vert(appdata_t IN)
 				{
@@ -96,7 +104,7 @@
 
 				bool nearlyEqual(float a, float b)
 				{
-					return (abs(a - b) < .2);
+					return (abs(a - b) < .3);
 				}
 
 				bool nearlyEqual4(fixed4 a, fixed4 b)
@@ -114,6 +122,10 @@
 						return _First_Replace;
 					}else if(nearlyEqual4(c, _Second_Swap)){
 						return _Second_Replace;
+					}else if (nearlyEqual4(c, _Third_Swap)) {
+						return _Third_Replace;
+					}else if (nearlyEqual4(c, _Fourth_Swap)) {
+						return _Fourth_Replace;
 					}
 
 					return c;

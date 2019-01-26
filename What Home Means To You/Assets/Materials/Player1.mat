@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: Player1
   m_Shader: {fileID: 4800000, guid: 33fb24389e9f077439fdfba6b9264afa, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -85,7 +85,13 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _First_Replace: {r: 0.8301887, g: 0.5208259, b: 0.5208259, a: 1}
-    - _First_Swap: {r: 0.8980393, g: 0.8980393, b: 0.8980393, a: 1}
+    - _First_Replace: {r: 1, g: 0.55179626, b: 0.2117647, a: 1}
+    - _First_Swap: {r: 0.15294118, g: 0, b: 0.9607844, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _Fourth_Replace: {r: 0.9622642, g: 0.040850822, b: 0.040850822, a: 1}
+    - _Fourth_Swap: {r: 1, g: 1, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Second_Replace: {r: 0.764151, g: 0.5514863, b: 0.7268457, a: 1}
+    - _Second_Swap: {r: 1, g: 0, b: 0, a: 1}
+    - _Third_Replace: {r: 0.0047169924, g: 1, b: 0.96951413, a: 1}
+    - _Third_Swap: {r: 0, g: 1, b: 0, a: 1}
