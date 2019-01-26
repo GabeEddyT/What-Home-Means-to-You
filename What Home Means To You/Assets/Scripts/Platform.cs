@@ -17,7 +17,7 @@ public class Platform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), player1.GetComponent<Collider2D>(), GetComponent<Collider2D>().bounds.max.y - player1.GetComponent<Collider2D>().bounds.min.y > .2f);
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), player2.GetComponent<Collider2D>(), GetComponent<Collider2D>().bounds.max.y - player2.GetComponent<Collider2D>().bounds.min.y > .2f);
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), player1.GetComponent<Collider2D>(), GetComponent<Collider2D>().bounds.max.y - player1.GetComponent<Collider2D>().bounds.min.y > .2f || Input.GetKey(player1.GetComponent<ControlButtons>().down));
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), player2.GetComponent<Collider2D>(), GetComponent<Collider2D>().bounds.max.y - player2.GetComponent<Collider2D>().bounds.min.y > .2f || Input.GetKey(player2.GetComponent<ControlButtons>().down));
     }
 }
