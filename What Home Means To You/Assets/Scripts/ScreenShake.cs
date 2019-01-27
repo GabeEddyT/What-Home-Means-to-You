@@ -15,35 +15,11 @@ public class ScreenShake : MonoBehaviour
         defaultPos = transform.position;
     }
 
-    private void Update()
-    {
-        if (shaking)
-            ShakeScreen();
-    }
+    //private void Update()
+    //{
+    //    if (shaking)
+    //        ShakeScreen();
+    //}
 
-    public void beginShaking(float time)
-    {
-        shakeTime = time;
-        shakeTimer = 0;
-        shaking = true;
-    }
 
-    void ShakeScreen()
-    {
-        shakeTimer += Time.deltaTime;
-
-        if (shakeTimer >= shakeTime)
-        {
-            shaking = false;
-
-            transform.position = defaultPos;
-
-            return;
-        }
-
-        float randX = defaultPos.x + Random.Range(0, shakeRadius);
-        float randY = defaultPos.y + Random.Range(0, shakeRadius);
-
-        transform.position = new Vector3(randX, randY, defaultPos.z);
-    }
 }

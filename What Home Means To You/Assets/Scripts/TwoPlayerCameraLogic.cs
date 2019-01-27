@@ -18,6 +18,14 @@ public class TwoPlayerCameraLogic : MonoBehaviour
 
     public Text player1WinText;
     public Text player2WinText;
+
+    //Screenshake
+    Vector3 defaultPos;
+    public float shakeRadius;
+    float shakeTimer;
+    float shakeTime;
+    bool shaking;
+
     void Start()
     {
         originalPosOfCamera = transform.position;
@@ -27,11 +35,16 @@ public class TwoPlayerCameraLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (triggerPlayerWonTest)
+        //if (triggerPlayerWonTest)
+        //{
+        //    PlayerWinCameraEffect(1);
+        //}
+
+        if (shaking)
         {
-            PlayerWinCameraEffect(1);
+            ShakeScreen();
         }
-        if (runTwoPlayerCameraLogic)
+        else if (runTwoPlayerCameraLogic)
         {
             SmoothCameraFollow(thisCam, player1Transform, player2Transform);
         }
@@ -102,11 +115,39 @@ public class TwoPlayerCameraLogic : MonoBehaviour
         }
         Invoke("RestartGame", 5f);
     }
+
     /// <summary>
     /// TODO TO-DO to do -- make sure that the scene loading is right
     /// </summary>
     void RestartGame()
     {
         SceneManager.LoadScene(3);
+    }
+
+    public void beginShaking(float time)
+    {
+        shakeTime = time;
+        shakeTimer = 0;
+        defaultPos = transform.position;
+        shaking = true;
+    }
+
+    void ShakeScreen()
+    {
+        shakeTimer += Time.deltaTime;
+
+        if (shakeTimer >= shakeTime)
+        {
+            shaking = false;
+
+            //transform.position = defaultPos;
+
+            return;
+        }
+
+        float randX = defaultPos.x + Random.Range(0, shakeRadius);
+        float randY = defaultPos.y + Random.Range(0, shakeRadius);
+
+        transform.position = new Vector3(randX, randY, defaultPos.z);
     }
 }

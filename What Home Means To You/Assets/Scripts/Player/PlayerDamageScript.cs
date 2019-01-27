@@ -149,7 +149,7 @@ public class PlayerDamageScript : MonoBehaviour
 
         Time.timeScale = 1;
 
-        Camera.main.GetComponent<ScreenShake>().beginShaking(0.3f);
+        Camera.main.GetComponent<TwoPlayerCameraLogic>().beginShaking(0.3f);
     }
 
 

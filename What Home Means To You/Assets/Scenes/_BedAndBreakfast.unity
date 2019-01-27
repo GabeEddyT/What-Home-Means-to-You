@@ -1361,6 +1361,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5491622844142722741, guid: 83e9e57d95d0e094589bb34aacf66d33,
+        type: 3}
+      propertyPath: m_Name
+      value: ThrowableObject 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722743, guid: 83e9e57d95d0e094589bb34aacf66d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1415,11 +1420,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5491622844142722741, guid: 83e9e57d95d0e094589bb34aacf66d33,
-        type: 3}
-      propertyPath: m_Name
-      value: ThrowableObject 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e9e57d95d0e094589bb34aacf66d33, type: 3}
@@ -1586,6 +1586,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83a59be7c781d6345a8999894331f83f, type: 2}
+    - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
       propertyPath: groundCheckLayers.m_Bits
@@ -1596,20 +1606,10 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 83a59be7c781d6345a8999894331f83f, type: 2}
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
       propertyPath: moveSpeed
       value: 360
-      objectReference: {fileID: 0}
-    - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
@@ -3530,6 +3530,7 @@ GameObject:
   - component: {fileID: 981802748}
   - component: {fileID: 981802751}
   - component: {fileID: 981802752}
+  - component: {fileID: 981802753}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3634,6 +3635,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 979aea86c645bf342a4a3c2cc9c83d90, type: 2}
+--- !u!114 &981802753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981802747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9eb6ce10342da140adec91a02236519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeRadius: 0.4
 --- !u!1 &1038912852
 GameObject:
   m_ObjectHideFlags: 0
@@ -4961,6 +4975,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5491622844142722741, guid: 9d283c1e75e08274693c6fad1e88c3b8,
+        type: 3}
+      propertyPath: m_Name
+      value: KooshBall
+      objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722743, guid: 9d283c1e75e08274693c6fad1e88c3b8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5015,11 +5034,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5491622844142722741, guid: 9d283c1e75e08274693c6fad1e88c3b8,
-        type: 3}
-      propertyPath: m_Name
-      value: KooshBall
       objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722742, guid: 9d283c1e75e08274693c6fad1e88c3b8,
         type: 3}
@@ -7380,6 +7394,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2133e40dc1fb7947bfc72e22accf0e4, type: 2}
+    - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 675519555916790971, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: groundCheckLayers.m_Bits
@@ -7390,20 +7414,10 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f2133e40dc1fb7947bfc72e22accf0e4, type: 2}
     - target: {fileID: 675519555916790971, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: moveSpeed
       value: 360
-      objectReference: {fileID: 0}
-    - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 675519555916790971, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
