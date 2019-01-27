@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: dc4b8769a6929b24ea4372f77259cee2
+  - enabled: 1
+    path: Assets/Scenes/Control Screen.unity
+    guid: 9144df68b3def7041a98a2f63e7d4b50
   m_configObjects: {}
