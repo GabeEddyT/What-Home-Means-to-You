@@ -686,7 +686,6 @@ GameObject:
   - component: {fileID: 100348577}
   - component: {fileID: 100348576}
   - component: {fileID: 100348578}
-  - component: {fileID: 100348579}
   m_Layer: 0
   m_Name: MainMusic
   m_TagString: Untagged
@@ -706,7 +705,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6875fb74f96a2014cae0dcedf7750a19, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.034
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -818,20 +817,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalBGM: {fileID: 8300000, guid: 6875fb74f96a2014cae0dcedf7750a19, type: 3}
   secretBGM: {fileID: 8300000, guid: 320e0a88f0ea31845a184ded6ce3606f, type: 3}
---- !u!114 &100348579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100348575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abdd77d96a4c50f4c97d96ad67bcbbcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unlocked: 1
-  gameStarted: 0
 --- !u!1001 &160013255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6897,6 +6882,18 @@ PrefabInstance:
       propertyPath: PlayerRageUIObj
       value: 
       objectReference: {fileID: 1038912856}
+    - target: {fileID: 814298480, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
+      propertyPath: parrySwing
+      value: 
+      objectReference: {fileID: 8300000, guid: 4db663346e712024baf8998d733ffee0, type: 3}
+    - target: {fileID: 814298480, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
+      propertyPath: parrySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fa7dcd4f7e369c40b6ee320746d8f61, type: 3}
+    - target: {fileID: 814298480, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
+      propertyPath: hitStunLength
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2056912081, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.2
@@ -8717,7 +8714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &953586456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9366,7 +9363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1064930552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10156,7 +10153,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12721,7 +12718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 429.8, y: -668.5}
+  m_AnchoredPosition: {x: 429.8, y: -709}
   m_SizeDelta: {x: 160, y: 43.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007972479
@@ -13224,6 +13221,26 @@ PrefabInstance:
       propertyPath: PlayerRageUIObj
       value: 
       objectReference: {fileID: 680912382}
+    - target: {fileID: 5424962148079343683, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: parrySwing
+      value: 
+      objectReference: {fileID: 8300000, guid: 4db663346e712024baf8998d733ffee0, type: 3}
+    - target: {fileID: 5424962148079343683, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: parrySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fa7dcd4f7e369c40b6ee320746d8f61, type: 3}
+    - target: {fileID: 5424962148079343683, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: parryEffectLifetime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424962148079343683, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: hitStunLength
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2224656169433756513, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: m_Volume
@@ -13350,7 +13367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -232.9, y: -668.5}
+  m_AnchoredPosition: {x: -232.9, y: -709}
   m_SizeDelta: {x: 160, y: 43.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121636135

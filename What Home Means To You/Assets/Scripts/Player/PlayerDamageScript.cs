@@ -46,6 +46,12 @@ public class PlayerDamageScript : MonoBehaviour
     {
         if (canParry && Input.GetKeyDown(buttonSuite.parry))
             parryRoutine = StartCoroutine(doParry());
+
+        rage -= .16f * Time.unscaledDeltaTime;
+
+        rage = Mathf.Min(0, rage);
+
+        PlayerRageUIObj.AddRage(-.16f * Time.unscaledDeltaTime, gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

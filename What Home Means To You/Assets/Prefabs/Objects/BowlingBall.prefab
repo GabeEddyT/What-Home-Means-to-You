@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwSpeed: 3
   grabbable: 1
-  damage: 40
+  damage: 32
   weight: 1
 --- !u!50 &107863721
 Rigidbody2D:
