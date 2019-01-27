@@ -20,6 +20,7 @@ public class PlayerDamageScript : MonoBehaviour
     bool canParry = true;
     bool inHitStun = false;
 
+    public AudioClip parrySwing;
     public AudioClip parrySound;
     public AudioClip damageSound;
 
@@ -134,7 +135,7 @@ public class PlayerDamageScript : MonoBehaviour
         canParry = false;
 
         animator.Play("Parry");
-
+        audioSource.PlayOneShot(parrySwing);
         yield return new WaitForSeconds(parryLength);
 
         endParry();

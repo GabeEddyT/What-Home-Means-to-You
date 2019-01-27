@@ -918,5 +918,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 814298480, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
+      propertyPath: parrySwing
+      value: 
+      objectReference: {fileID: 8300000, guid: 4db663346e712024baf8998d733ffee0, type: 3}
+    - target: {fileID: 814298480, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
+      propertyPath: parrySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fa7dcd4f7e369c40b6ee320746d8f61, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
