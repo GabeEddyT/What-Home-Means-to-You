@@ -85,7 +85,7 @@ public class PlayerDamageScript : MonoBehaviour
 
         rage = Mathf.Min(rage, 100f);
 
-        audioSource.PlayOneShot(damageSound, .15f);
+        audioSource.PlayOneShot(damageSound, .18f);
 
         PlayerRageUIObj.AddRage(damage, this.gameObject);
 

@@ -6807,7 +6807,7 @@ PrefabInstance:
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
       propertyPath: moveSpeed
-      value: 340
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
@@ -6858,6 +6858,10 @@ PrefabInstance:
       propertyPath: PlayerRageUIObj
       value: 
       objectReference: {fileID: 1038912856}
+    - target: {fileID: 814298480, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
+      propertyPath: parrySwing
+      value: 
+      objectReference: {fileID: 8300000, guid: 4db663346e712024baf8998d733ffee0, type: 3}
     - target: {fileID: 814298481, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
       propertyPath: m_Volume
       value: 0.45
@@ -7162,6 +7166,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701934542}
   m_CullTransparentMesh: 0
+--- !u!1 &736331206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 736331208}
+  - component: {fileID: 736331207}
+  m_Layer: 0
+  m_Name: EscapeToQuit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &736331207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736331206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179e578711995d54eb297d6f495240f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &736331208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736331206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 332.3255, y: 274.06525, z: 32.715973}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &739128244
 GameObject:
   m_ObjectHideFlags: 0
@@ -8687,7 +8734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &953586456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9336,7 +9383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1064930552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10126,7 +10173,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13127,7 +13174,7 @@ PrefabInstance:
     - target: {fileID: 675519555916790971, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: moveSpeed
-      value: 340
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 675519555916790971, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
@@ -13184,6 +13231,11 @@ PrefabInstance:
       propertyPath: PlayerRageUIObj
       value: 
       objectReference: {fileID: 680912382}
+    - target: {fileID: 5424962148079343683, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: parrySwing
+      value: 
+      objectReference: {fileID: 8300000, guid: 4db663346e712024baf8998d733ffee0, type: 3}
     - target: {fileID: 2224656169433756513, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: m_Volume

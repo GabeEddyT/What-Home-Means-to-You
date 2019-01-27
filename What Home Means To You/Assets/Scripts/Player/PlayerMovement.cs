@@ -49,11 +49,16 @@ public class PlayerMovement : MonoBehaviour
 
             Physics2D.IgnoreCollision(collider, player.GetComponent<Collider2D>(), true);
         }
-
+       // Invoke("HardCodeSpeed", 1f);
+    }
+    void HardCodeSpeed()
+    {
+        moveSpeed = 321;
     }
 
     private void Update()
     {
+        print(moveSpeed);
         grounded = checkIfGrounded();
 
         handleMovement();
