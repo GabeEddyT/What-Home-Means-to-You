@@ -6885,6 +6885,10 @@ PrefabInstance:
       propertyPath: parrySound
       value: 
       objectReference: {fileID: 8300000, guid: 3fa7dcd4f7e369c40b6ee320746d8f61, type: 3}
+    - target: {fileID: 814298480, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
+      propertyPath: parryFreezeFrameLength
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 814298481, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
       propertyPath: m_Volume
       value: 0.45
@@ -7846,7 +7850,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 71efef4a4585a5348b8c7a5c21232e1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9615,7 +9619,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fad828ef8fc64864392589b6f3e0b090, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10931,7 +10935,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8dbc487d2f7d7ce40932990371817ece, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11290,7 +11294,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 143cee1320af7284f8d824d796dda10d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12062,7 +12066,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 143cee1320af7284f8d824d796dda10d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12850,7 +12854,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.6}
+  m_Offset: {x: 0, y: 0.58056945}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12861,7 +12865,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.87, y: 0.41}
+  m_Size: {x: 2.87, y: 0.3711387}
   m_EdgeRadius: 0
 --- !u!212 &2022492921
 SpriteRenderer:
@@ -12899,7 +12903,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8983308b66e249d4ba55b15c9b390cf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13274,6 +13278,11 @@ PrefabInstance:
       propertyPath: parrySound
       value: 
       objectReference: {fileID: 8300000, guid: 3fa7dcd4f7e369c40b6ee320746d8f61, type: 3}
+    - target: {fileID: 5424962148079343683, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: parryFreezeFrameLength
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2224656169433756513, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: m_Volume

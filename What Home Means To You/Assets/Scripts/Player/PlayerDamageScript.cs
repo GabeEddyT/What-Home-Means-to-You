@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -75,7 +76,7 @@ public class PlayerDamageScript : MonoBehaviour
 
             StartCoroutine(PauseScreen());
         }
-        else if(!inHitStun)
+        else if(!inHitStun && !invulnerable)
             takeDamage(throwableScript.damage);
     }
 
@@ -108,8 +109,9 @@ public class PlayerDamageScript : MonoBehaviour
 
         inHitStun = true;
         StartCoroutine(damageFlash());
-
         yield return new WaitForSeconds(hitStunLength);
+
+        StartCoroutine(Iframes());
 
         inHitStun = false;
         movementScript.canMove = true;
@@ -119,9 +121,17 @@ public class PlayerDamageScript : MonoBehaviour
 
     }
 
+    IEnumerator Iframes()
+    {
+        invulnerable = true;
+
+        yield return new WaitForSeconds(0.8f);
+
+        invulnerable = false;
+    }
     IEnumerator damageFlash()
     {
-        while(inHitStun)
+        while(inHitStun || invulnerable)
         {
             spriteRenderer.enabled = !spriteRenderer.enabled;
 

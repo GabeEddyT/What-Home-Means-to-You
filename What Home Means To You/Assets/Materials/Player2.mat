@@ -91,7 +91,7 @@ Material:
     - _Fourth_Replace: {r: 0, g: 0, b: 0, a: 1}
     - _Fourth_Swap: {r: 1, g: 1, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Second_Replace: {r: 0.1957547, g: 0.5, b: 0.24342309, a: 1}
+    - _Second_Replace: {r: 0.94415545, g: 0.17377396, b: 1, a: 1}
     - _Second_Swap: {r: 1, g: 0, b: 0, a: 1}
     - _Third_Replace: {r: 0.5283019, g: 0.25941214, b: 0.09220363, a: 1}
     - _Third_Swap: {r: 0, g: 1, b: 0, a: 1}

@@ -44,6 +44,7 @@ public class ItemManager : MonoBehaviour
                     hit.transform.position = Socket.transform.position;
                     hit.GetComponent<Rigidbody2D>().simulated = false;
                     hit.GetComponent<ThrowableObject>().grabbable = false;
+                    Physics2D.IgnoreCollision(GetComponent<Collider2D>(), hit.GetComponent<Collider2D>());
                 }
             }
         }
