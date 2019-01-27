@@ -118,7 +118,6 @@ public class PlayerMovement : MonoBehaviour
         if(canMove && grounded && Input.GetKeyDown(buttonSuite.up))
         {
             physics.velocity = Vector2.up * jumpSpeed;
-            dustParticles.Play();
         }
 
         if (!grounded && !fastFall && Input.GetKeyDown(buttonSuite.down))
