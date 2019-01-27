@@ -9,7 +9,7 @@ public class ThrowableObject : MonoBehaviour
     public float damage;
     public float weight;
     ItemManager []players;
-
+    GameObject opponent;
     Vector2 initialVelocity;
  
 
@@ -62,10 +62,12 @@ public class ThrowableObject : MonoBehaviour
 
         if (_deflector.gameObject == players[0].gameObject)
         {
+            opponent = players[1].gameObject;
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), players[1].GetComponent<Collider2D>(), false);
         }
-        else
+        else if (_deflector.gameObject == players[1].gameObject)
         {
+            opponent = players[0].gameObject;
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), players[0].GetComponent<Collider2D>(), false);
         }
 
@@ -85,6 +87,8 @@ public class ThrowableObject : MonoBehaviour
         foreach (var item in players)
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), item.GetComponent<Collider2D>(), true);
+
+            opponent = null;
         }
     }
 }

@@ -57,6 +57,7 @@ public class PlayerDamageScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("called");
         ThrowableObject throwableScript = collision.gameObject.GetComponent<ThrowableObject>();
 
         if (!throwableScript)
@@ -74,6 +75,7 @@ public class PlayerDamageScript : MonoBehaviour
             StopCoroutine(parryRoutine);
             endParry();
 
+            Camera.main.GetComponent<TwoPlayerCameraLogic>().beginShaking(0.1f);
             StartCoroutine(PauseScreen());
         }
         else if(!inHitStun && !invulnerable)
@@ -173,8 +175,6 @@ public class PlayerDamageScript : MonoBehaviour
         }
 
         Time.timeScale = 1;
-
-        Camera.main.GetComponent<TwoPlayerCameraLogic>().beginShaking(0.3f);
     }
 
 

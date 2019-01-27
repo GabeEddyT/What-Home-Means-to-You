@@ -58,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        print(moveSpeed);
         grounded = checkIfGrounded();
 
         handleMovement();

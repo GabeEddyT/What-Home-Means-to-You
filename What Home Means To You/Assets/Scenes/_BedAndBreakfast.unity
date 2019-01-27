@@ -6777,7 +6777,7 @@ PrefabInstance:
     - target: {fileID: 8627139149448695935, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8627139149448695935, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
@@ -9108,7 +9108,7 @@ MonoBehaviour:
   triggerPlayerWonTest: 0
   player1WinText: {fileID: 1971840877}
   player2WinText: {fileID: 536501822}
-  shakeRadius: 0
+  shakeRadius: 0.8
 --- !u!114 &981802752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13156,7 +13156,7 @@ PrefabInstance:
     - target: {fileID: 675519555916790949, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 675519555916790949, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
