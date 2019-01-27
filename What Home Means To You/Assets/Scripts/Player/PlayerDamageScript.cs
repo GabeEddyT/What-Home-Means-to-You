@@ -12,6 +12,7 @@ public class PlayerDamageScript : MonoBehaviour
     public float parryFreezeFrameLength;
     public float hitStunLength;
 
+    public float parryEffectLifetime;
     //public float flashDelay;
     public GameObject parryParticle;
 
@@ -56,7 +57,8 @@ public class PlayerDamageScript : MonoBehaviour
         {         
             throwableScript.Deflect(GetComponent<Collider2D>());
 
-            Instantiate(parryParticle, transform.position, transform.rotation);
+            GameObject parryEffect = Instantiate(parryParticle, transform.position, transform.rotation);
+            Destroy(parryEffect, parryEffectLifetime);
 
             audioSource.PlayOneShot(parrySound);
 

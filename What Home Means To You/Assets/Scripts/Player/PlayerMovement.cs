@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     public float groundRaycastDistance;
     public LayerMask groundCheckLayers;
 
+    [Header("Misc")]
+    public ParticleSystem dustParticles;
+
     ControlButtons buttonSuite;
     SpriteRenderer renderer;
 
@@ -35,6 +38,18 @@ public class PlayerMovement : MonoBehaviour
         physics = GetComponent<Rigidbody2D>();
         buttonSuite = GetComponent<ControlButtons>();
         renderer = GetComponent<SpriteRenderer>();
+
+        //ignore other player's colliders
+        PlayerMovement[] players = FindObjectsOfType<PlayerMovement>();
+        Collider2D collider = GetComponent<Collider2D>();
+        foreach (PlayerMovement player in players)
+        {
+            if (player.gameObject.name == gameObject.name)
+                continue;
+
+            Physics2D.IgnoreCollision(collider, player.GetComponent<Collider2D>(), true);
+        }
+
     }
 
     private void Update()
@@ -81,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
             if (newVel.x < 0 && physics.velocity.x > 0 || newVel.x > 0 && physics.velocity.x < 0) //if direction of movement is opposite current velocity brake manually
             {
                 currentVelocity += Vector2.right * direction * manualBrakeSpeed * Time.deltaTime;
+                dustParticles.Play();
             }
             else
             {
@@ -102,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
         if(canMove && grounded && Input.GetKeyDown(buttonSuite.up))
         {
             physics.velocity = Vector2.up * jumpSpeed;
+            dustParticles.Play();
         }
 
         if (!grounded && !fastFall && Input.GetKeyDown(buttonSuite.down))
