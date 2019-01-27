@@ -174,7 +174,7 @@ public class PlayerDamageScript : MonoBehaviour
             yield return 0;
         }
 
-        Time.timeScale = 1;
+        Time.timeScale = Data.TURBO_SETTING;
     }
 
 
