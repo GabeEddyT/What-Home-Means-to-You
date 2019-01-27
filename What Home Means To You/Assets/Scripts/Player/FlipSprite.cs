@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class FlipSprite : MonoBehaviour
 {
-    public bool defaultRight;
+
     SpriteRenderer sprite;
     Rigidbody2D physics;
-
+    PlayerMovement movementScript;
     // Start is called before the first frame update
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         physics = GetComponent<Rigidbody2D>();
+
+        movementScript = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,9 @@ public class FlipSprite : MonoBehaviour
         //            transform.rotation = Quaternion.Euler(0, 0, 0);
         //    }
         //}
+
+        if (!movementScript.canMove)
+            return;
 
         if (Input.GetKey(GetComponent<ControlButtons>().right))
         {
