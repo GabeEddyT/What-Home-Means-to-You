@@ -28,12 +28,19 @@ public class SelectColor : MonoBehaviour
         redSlider.value = mat.GetColor(replaceParam).r;
         greenSlider.value = mat.GetColor(replaceParam).g;
         blueSlider.value = mat.GetColor(replaceParam).b;
+        UnityEngine.SceneManagement.SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
+    }
+
+    private void SceneManager_activeSceneChanged(UnityEngine.SceneManagement.Scene arg0, UnityEngine.SceneManagement.Scene arg1)
+    {
+        // Save the changed colors to the actual material
+        GetComponent<SpriteRenderer>().sharedMaterial = mat;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        mat.SetColor(replaceParam, new Color(redSlider.value, greenSlider.value, blueSlider.value));
+        mat.SetColor(replaceParam, new Color(redSlider.value, greenSlider.value, blueSlider.value));        
     }
 
     public void ChangeColor()
