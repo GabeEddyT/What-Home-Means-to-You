@@ -37,7 +37,7 @@ public class ItemManager : MonoBehaviour
             }
             catch
             {// Not holding
-                var hit = Physics2D.OverlapCircle(transform.position, .5f, LayerMask.GetMask("Throwable"));
+                var hit = Physics2D.OverlapCircle(transform.position, 1f, LayerMask.GetMask("Throwable"));
                 if (hit && hit.GetComponent<ThrowableObject>().grabbable)
                 {
                     hit.transform.parent = Socket;

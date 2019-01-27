@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96f4322e110e56645b6d8693edc3976a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 4.75
+  throwSpeed: 6
   grabbable: 1
   damage: 9
   weight: 0.75

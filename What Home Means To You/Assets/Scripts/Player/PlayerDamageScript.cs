@@ -78,9 +78,9 @@ public class PlayerDamageScript : MonoBehaviour
 
         rage = Mathf.Min(rage, 100f);
 
-        audioSource.PlayOneShot(damageSound);
+        audioSource.PlayOneShot(damageSound, .15f);
 
-        //PlayerRageUIObj.AddRage(damage, this.gameObject);
+        PlayerRageUIObj.AddRage(damage, this.gameObject);
 
         StartCoroutine(hitStun());
     }
@@ -157,7 +157,7 @@ public class PlayerDamageScript : MonoBehaviour
 
         Time.timeScale = 1;
 
-        //Camera.main.GetComponent<TwoPlayerCameraLogic>().beginShaking(0.3f);
+        Camera.main.GetComponent<TwoPlayerCameraLogic>().beginShaking(0.3f);
     }
 
 
