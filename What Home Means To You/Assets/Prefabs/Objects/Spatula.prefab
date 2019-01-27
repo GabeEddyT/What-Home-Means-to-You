@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5491622844142722743}
   - component: {fileID: 5491622844142722740}
   - component: {fileID: 5491622844142722742}
-  - component: {fileID: 5491622844142722745}
   - component: {fileID: 107863721}
+  - component: {fileID: 4134006766112608381}
   m_Layer: 12
-  m_Name: Spoon
+  m_Name: Spatula
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5491622844142722741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.35, y: -1.84, z: -4.17}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.46413, y: 0.46413, z: 4.6413}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_SortingLayerID: -253635793
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34f9dfeec1a8cc3419427685f9c7a04d, type: 3}
-  m_Color: {r: 1, g: 0.95084643, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b0c6e3ff0649c154aab938efc76bc7ac, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,25 +96,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwSpeed: 8
   grabbable: 1
-  damage: 11
-  weight: 10
-  SpinSpeed: 3
---- !u!58 &5491622844142722745
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5491622844142722741}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.325
+  damage: 9
+  weight: 7
 --- !u!50 &107863721
 Rigidbody2D:
   serializedVersion: 4
@@ -136,3 +119,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &4134006766112608381
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491622844142722741}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.27, y: 1.44}
+    newSize: {x: 4.65, y: 4.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.27, y: 1.44}
+  m_EdgeRadius: 0

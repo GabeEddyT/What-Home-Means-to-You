@@ -13,6 +13,7 @@ public class PlayerDamageScript : MonoBehaviour
     public float parryFreezeFrameLength;
     public float hitStunLength;
 
+    public float parryEffectLifetime;
     //public float flashDelay;
     public GameObject parryParticle;
 
@@ -57,7 +58,8 @@ public class PlayerDamageScript : MonoBehaviour
         {         
             throwableScript.Deflect(GetComponent<Collider2D>());
 
-            Instantiate(parryParticle, transform.position, transform.rotation);
+            GameObject parryEffect = Instantiate(parryParticle, transform.position, transform.rotation);
+            Destroy(parryEffect, parryEffectLifetime);
 
             audioSource.PlayOneShot(parrySound);
 
@@ -78,7 +80,7 @@ public class PlayerDamageScript : MonoBehaviour
 
         audioSource.PlayOneShot(damageSound);
 
-        PlayerRageUIObj.AddRage(damage, this.gameObject);
+        //PlayerRageUIObj.AddRage(damage, this.gameObject);
 
         StartCoroutine(hitStun());
     }
@@ -91,6 +93,7 @@ public class PlayerDamageScript : MonoBehaviour
             StopCoroutine(parryRoutine);
             endParry();
         }
+        animator.Play("Damage");
 
         movementScript.canMove = false;
         throwScript.canThrow = false;
@@ -105,6 +108,8 @@ public class PlayerDamageScript : MonoBehaviour
         movementScript.canMove = true;
         throwScript.canThrow = true;
         canParry = true;
+        animator.Play("Idle");
+
     }
 
     IEnumerator damageFlash()
@@ -152,7 +157,7 @@ public class PlayerDamageScript : MonoBehaviour
 
         Time.timeScale = 1;
 
-        Camera.main.GetComponent<TwoPlayerCameraLogic>().beginShaking(0.3f);
+        //Camera.main.GetComponent<TwoPlayerCameraLogic>().beginShaking(0.3f);
     }
 
 
