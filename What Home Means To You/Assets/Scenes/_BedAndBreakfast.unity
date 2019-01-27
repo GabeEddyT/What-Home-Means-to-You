@@ -682,6 +682,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5491622844142722741, guid: bdd77ca68c64a21439baef71bb40d7e3,
+        type: 3}
+      propertyPath: m_Name
+      value: BowlingBall
+      objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722743, guid: bdd77ca68c64a21439baef71bb40d7e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -736,11 +741,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5491622844142722741, guid: bdd77ca68c64a21439baef71bb40d7e3,
-        type: 3}
-      propertyPath: m_Name
-      value: BowlingBall
       objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722742, guid: bdd77ca68c64a21439baef71bb40d7e3,
         type: 3}
@@ -1610,20 +1610,10 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 83a59be7c781d6345a8999894331f83f, type: 2}
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
       propertyPath: moveSpeed
       value: 360
-      objectReference: {fileID: 0}
-    - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
@@ -1644,6 +1634,16 @@ PrefabInstance:
         type: 3}
       propertyPath: fastFallSpeed
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83a59be7c781d6345a8999894331f83f, type: 2}
+    - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8627139149448695928, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
@@ -3461,6 +3461,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5491622844142722741, guid: 83e9e57d95d0e094589bb34aacf66d33,
+        type: 3}
+      propertyPath: m_Name
+      value: Spoon
+      objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722743, guid: 83e9e57d95d0e094589bb34aacf66d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3515,11 +3520,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5491622844142722741, guid: 83e9e57d95d0e094589bb34aacf66d33,
-        type: 3}
-      propertyPath: m_Name
-      value: Spoon
       objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722742, guid: 83e9e57d95d0e094589bb34aacf66d33,
         type: 3}
@@ -3724,6 +3724,7 @@ MonoBehaviour:
   triggerPlayerWonTest: 0
   player1WinText: {fileID: 1971840877}
   player2WinText: {fileID: 536501822}
+  shakeRadius: 0
 --- !u!114 &981802752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6614,6 +6615,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5491622844142722741, guid: b4d009ea0ce3c764cbf0eded87ecc147,
+        type: 3}
+      propertyPath: m_Name
+      value: Nerf Gun
+      objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722743, guid: b4d009ea0ce3c764cbf0eded87ecc147,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6668,11 +6674,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5491622844142722741, guid: b4d009ea0ce3c764cbf0eded87ecc147,
-        type: 3}
-      propertyPath: m_Name
-      value: Nerf Gun
       objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722745, guid: b4d009ea0ce3c764cbf0eded87ecc147,
         type: 3}
@@ -7526,20 +7527,10 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f2133e40dc1fb7947bfc72e22accf0e4, type: 2}
     - target: {fileID: 675519555916790971, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: moveSpeed
       value: 360
-      objectReference: {fileID: 0}
-    - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 675519555916790971, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
@@ -7560,6 +7551,16 @@ PrefabInstance:
         type: 3}
       propertyPath: fastFallSpeed
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2133e40dc1fb7947bfc72e22accf0e4, type: 2}
+    - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 675519555916790968, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
