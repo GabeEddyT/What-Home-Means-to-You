@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_BedAndBreakfast.unity
     guid: 71fd6748c614d7c4e8ed822e81b0a6b4
+  - enabled: 1
+    path: Assets/Scenes/Settings/Adjust Colors.unity
+    guid: 5c85f027d2a7e6a4fb3ff9ece5ee231d
   m_configObjects: {}
