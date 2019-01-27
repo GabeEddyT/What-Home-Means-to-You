@@ -5,7 +5,6 @@ using UnityEngine;
 public class ThrowableObject : MonoBehaviour
 {
     public float throwSpeed;
-    public float spinSpeed;
     public bool grabbable = true;
     public float damage;
     public float weight;

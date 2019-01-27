@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5491622844142722745}
   - component: {fileID: 107863721}
   m_Layer: 12
-  m_Name: ThrowableObject
+  m_Name: Kirby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,8 @@ MonoBehaviour:
   throwSpeed: 4
   spinSpeed: 0
   grabbable: 1
-  damage: 0
+  damage: 3
+  weight: 0
 --- !u!58 &5491622844142722745
 CircleCollider2D:
   m_ObjectHideFlags: 0

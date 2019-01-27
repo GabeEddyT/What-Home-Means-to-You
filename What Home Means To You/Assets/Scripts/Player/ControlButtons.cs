@@ -8,6 +8,7 @@ public class ControlButtons : MonoBehaviour
     public KeyCode right;
     public KeyCode up;
     public KeyCode down;
-    public KeyCode pickupThrow;
+    public KeyCode throwLobbed;
+    public KeyCode throwStraight;
     public KeyCode parry;
 }

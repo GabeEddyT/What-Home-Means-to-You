@@ -7,6 +7,8 @@ public class ItemManager : MonoBehaviour
     public Transform Socket;
     public bool canThrow = true;
     ControlButtons buttons;
+    bool lobbedThrow;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,13 @@ public class ItemManager : MonoBehaviour
 
     void CheckPickup()
     {
-        if (canThrow && Input.GetKeyDown(buttons.pickupThrow))
+        if (canThrow && ( Input.GetKeyDown(buttons.throwLobbed) || Input.GetKeyDown(buttons.throwStraight) ))
         {
+            if (Input.GetKeyDown(buttons.throwLobbed))
+                lobbedThrow = true;
+            else
+                lobbedThrow = false;
+
             try
             {// Check if holding an object
                 Socket.GetChild(0);
@@ -49,6 +56,10 @@ public class ItemManager : MonoBehaviour
     void ThrowItem()
     {
         var item = Socket.GetChild(0).GetComponent<ThrowableObject>();
-        item.Throw(item.transform.position, -transform.right * 2 + transform.up);
+
+        if(lobbedThrow)
+            item.Throw(item.transform.position, -transform.right * 2 + transform.up);
+        else
+            item.Throw(item.transform.position, -transform.right * 2 + (transform.up / 2));
     }
 }
