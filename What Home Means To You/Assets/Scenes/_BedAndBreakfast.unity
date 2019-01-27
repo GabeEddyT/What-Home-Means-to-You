@@ -1608,7 +1608,7 @@ PrefabInstance:
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
       propertyPath: jumpSpeed
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
@@ -1618,7 +1618,7 @@ PrefabInstance:
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
       propertyPath: moveSpeed
-      value: 360
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 8627139149448695934, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
@@ -1660,6 +1660,10 @@ PrefabInstance:
       propertyPath: parry
       value: 109
       objectReference: {fileID: 0}
+    - target: {fileID: 814298480, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
+      propertyPath: PlayerRageUIObj
+      value: 
+      objectReference: {fileID: 1038912856}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
 --- !u!1 &637825864
@@ -3724,6 +3728,7 @@ MonoBehaviour:
   triggerPlayerWonTest: 0
   player1WinText: {fileID: 1971840877}
   player2WinText: {fileID: 536501822}
+  shakeRadius: 0
 --- !u!114 &981802752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7280,7 +7285,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.65}
+  m_Offset: {x: 0, y: 0.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7524,7 +7529,7 @@ PrefabInstance:
     - target: {fileID: 675519555916790971, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: jumpSpeed
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
@@ -7534,7 +7539,7 @@ PrefabInstance:
     - target: {fileID: 675519555916790971, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: moveSpeed
-      value: 360
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 675519555916790970, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
@@ -7576,6 +7581,11 @@ PrefabInstance:
       propertyPath: parry
       value: 271
       objectReference: {fileID: 0}
+    - target: {fileID: 5424962148079343683, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: PlayerRageUIObj
+      value: 
+      objectReference: {fileID: 680912382}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ace19e087da8224cac495d95aa4cd0a, type: 3}
 --- !u!4 &2088508150 stripped
