@@ -11,6 +11,7 @@ public class ThrowableObject : MonoBehaviour
     ItemManager []players;
 
     Vector2 initialVelocity;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class ThrowableObject : MonoBehaviour
         Rigidbody2D rigidBody = GetComponent<Rigidbody2D>();
 
         rigidBody.velocity += Vector2.down * weight * Time.deltaTime;
+
     }
 
     public void Throw(Vector2 startPos, Vector2 direction)
