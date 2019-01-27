@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
 
         GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(currentVelocity.x / 8));
         GetComponent<Animator>().SetBool("Walking", currentVelocity.x != 0.0f);
-
+        GetComponent<Animator>().SetBool("Grounded", grounded);
     }
 
     void handleJump()
