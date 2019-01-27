@@ -12,9 +12,11 @@ public class PlayerDamageScript : MonoBehaviour
     public float parryFreezeFrameLength;
     public float hitStunLength;
 
+    //public float flashDelay;
     public GameObject parryParticle;
 
     bool canParry = true;
+    bool inHitStun = false;
 
     public AudioClip parrySound;
     public AudioClip damageSound;
@@ -24,6 +26,8 @@ public class PlayerDamageScript : MonoBehaviour
     PlayerMovement movementScript;
     ItemManager throwScript;
     Coroutine parryRoutine;
+    Animator animator;
+    SpriteRenderer spriteRenderer;
 
     private void Start()
     {
@@ -31,6 +35,8 @@ public class PlayerDamageScript : MonoBehaviour
         movementScript = GetComponent<PlayerMovement>();
         throwScript = GetComponent<ItemManager>();
         audioSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -59,7 +65,7 @@ public class PlayerDamageScript : MonoBehaviour
 
             StartCoroutine(Pause());
         }
-        else
+        else if(!inHitStun)
             takeDamage(throwableScript.damage);
     }
 
@@ -87,17 +93,30 @@ public class PlayerDamageScript : MonoBehaviour
         throwScript.canThrow = false;
         canParry = false;
 
+        inHitStun = true;
+        StartCoroutine(damageFlash());
+
         yield return new WaitForSeconds(hitStunLength);
 
+        inHitStun = false;
         movementScript.canMove = true;
         throwScript.canThrow = true;
         canParry = true;
     }
 
-    //IEnumerator damageFlash()
-    //{
+    IEnumerator damageFlash()
+    {
+        while(inHitStun)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled;
 
-    //}
+            yield return null;
+        }
+
+        spriteRenderer.enabled = true;
+
+        yield return null;
+    }
 
     IEnumerator doParry()
     {
@@ -106,13 +125,17 @@ public class PlayerDamageScript : MonoBehaviour
         throwScript.canThrow = false;
         canParry = false;
 
+        animator.Play("Parry");
+
         yield return new WaitForSeconds(parryLength);
 
-        parryFrames = false;
+        endParry();
+
+        canParry = false;
 
         yield return new WaitForSeconds(parryRecovery);
 
-        endParry();
+        canParry = true;
     }
     private IEnumerator Pause()
     {
@@ -135,6 +158,8 @@ public class PlayerDamageScript : MonoBehaviour
         movementScript.canMove = true;
         throwScript.canThrow = true;
         parryRoutine = null;
+
+        animator.Play("Idle");
     }
 
 }
