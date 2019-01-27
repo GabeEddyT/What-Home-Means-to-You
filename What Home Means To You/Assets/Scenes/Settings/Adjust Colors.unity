@@ -634,6 +634,7 @@ MonoBehaviour:
   greenSlider: {fileID: 488647031}
   blueSlider: {fileID: 827819353}
   replaceParam: _First_Replace
+  partLabel: {fileID: 555032354}
 --- !u!114 &272938469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1166,6 +1167,7 @@ MonoBehaviour:
   greenSlider: {fileID: 161918266}
   blueSlider: {fileID: 52443384}
   replaceParam: _First_Replace
+  partLabel: {fileID: 178493081}
 --- !u!114 &485193748
 MonoBehaviour:
   m_ObjectHideFlags: 0

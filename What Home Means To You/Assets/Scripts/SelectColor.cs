@@ -5,13 +5,20 @@ using UnityEngine.UI;
 
 public class SelectColor : MonoBehaviour
 {
+    public enum Modes
+    {
+        Hair,
+        Shirt,
+        Shorts,
+        Shoes
+    }
     public Gradient gradient;
     public Color color;
     public Slider redSlider;
     public Slider greenSlider;
     public Slider blueSlider;
     public string replaceParam = "_First_Replace";
-
+    public Text partLabel;
     float hue, saturation, value;
     Material mat;
     // Start is called before the first frame update
@@ -31,7 +38,7 @@ public class SelectColor : MonoBehaviour
 
     public void ChangeColor()
     {
-
+        
     }
 
     public void SwitchParam(float param)
@@ -53,6 +60,7 @@ public class SelectColor : MonoBehaviour
             default:
                 break;
         }
+        partLabel.text = ((Modes)param).ToString();
         redSlider.value = mat.GetColor(replaceParam).r;
         greenSlider.value = mat.GetColor(replaceParam).g;
         blueSlider.value = mat.GetColor(replaceParam).b;
