@@ -63,7 +63,7 @@ public class PlayerDamageScript : MonoBehaviour
             StopCoroutine(parryRoutine);
             endParry();
 
-            StartCoroutine(Pause());
+            StartCoroutine(PauseScreen());
         }
         else if(!inHitStun)
             takeDamage(throwableScript.damage);
@@ -137,15 +137,19 @@ public class PlayerDamageScript : MonoBehaviour
 
         canParry = true;
     }
-    private IEnumerator Pause()
+    private IEnumerator PauseScreen()
     {
         Time.timeScale = 0f;
         float pauseEndTime = Time.realtimeSinceStartup + parryFreezeFrameLength;
+
         while (Time.realtimeSinceStartup < pauseEndTime)
         {
             yield return 0;
         }
+
         Time.timeScale = 1;
+
+        Camera.main.GetComponent<ScreenShake>().beginShaking(0.3f);
     }
 
 
