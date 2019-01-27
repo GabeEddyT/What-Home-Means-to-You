@@ -6891,7 +6891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 814298481, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
       propertyPath: m_Volume
-      value: 0.45
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2056912081, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
       propertyPath: InitialModule.startSize.scalar

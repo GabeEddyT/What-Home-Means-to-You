@@ -69,7 +69,7 @@ public class PlayerDamageScript : MonoBehaviour
             GameObject parryEffect = Instantiate(parryParticle, transform.position, transform.rotation);
             Destroy(parryEffect, parryEffectLifetime);
 
-            audioSource.PlayOneShot(parrySound);
+            audioSource.PlayOneShot(parrySound, 0.1f);
 
             StopCoroutine(parryRoutine);
             endParry();
@@ -86,7 +86,7 @@ public class PlayerDamageScript : MonoBehaviour
 
         rage = Mathf.Min(rage, 100f);
 
-        audioSource.PlayOneShot(damageSound, .18f);
+        audioSource.PlayOneShot(damageSound, .1f);
 
         PlayerRageUIObj.AddRage(damage, this.gameObject);
 
@@ -151,7 +151,7 @@ public class PlayerDamageScript : MonoBehaviour
         canParry = false;
 
         animator.Play("Parry");
-        audioSource.PlayOneShot(parrySwing);
+        audioSource.PlayOneShot(parrySwing, 0.08f);
         yield return new WaitForSeconds(parryLength);
 
         endParry();

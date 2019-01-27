@@ -101,7 +101,9 @@ public class PlayerMovement : MonoBehaviour
             if (newVel.x < 0 && physics.velocity.x > 0 || newVel.x > 0 && physics.velocity.x < 0) //if direction of movement is opposite current velocity brake manually
             {
                 currentVelocity += Vector2.right * direction * manualBrakeSpeed * Time.deltaTime;
-                dustParticles.Play();
+
+                if(grounded)
+                    dustParticles.Play();
             }
             else
             {

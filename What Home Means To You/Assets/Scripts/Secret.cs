@@ -61,6 +61,7 @@ public class Secret : MonoBehaviour
             if (correct)
             {
                 unlocked = true;
+                audioSource.volume = 0.1f;
                 audioSource.Play();
             }
         }
