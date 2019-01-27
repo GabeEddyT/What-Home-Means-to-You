@@ -22,4 +22,8 @@ public class Transition : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(scene);
     }
+    public void Quitgame()
+    {
+        Application.Quit();
+    }
 }
