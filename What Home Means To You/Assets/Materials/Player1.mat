@@ -85,13 +85,13 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _First_Replace: {r: 0.63305634, g: 0.2469507, b: 0.39523658, a: 1}
+    - _First_Replace: {r: 0.25989348, g: 0.41820896, b: 0.44800845, a: 1}
     - _First_Swap: {r: 0.15294118, g: 0, b: 0.9607844, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _Fourth_Replace: {r: 0.9622642, g: 0.040850822, b: 0.040850822, a: 1}
     - _Fourth_Swap: {r: 1, g: 1, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Second_Replace: {r: 0.27583367, g: 0.7490714, b: 0.8820911, a: 1}
+    - _Second_Replace: {r: 0.6884137, g: 0.7490714, b: 0.8820911, a: 1}
     - _Second_Swap: {r: 1, g: 0, b: 0, a: 1}
-    - _Third_Replace: {r: 0.66410536, g: 0.57660335, b: 0.96951413, a: 1}
+    - _Third_Replace: {r: 0.87999016, g: 0.30794668, b: 0.27908313, a: 1}
     - _Third_Swap: {r: 0, g: 1, b: 0, a: 1}

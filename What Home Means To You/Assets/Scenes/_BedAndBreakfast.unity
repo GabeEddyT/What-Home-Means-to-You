@@ -685,6 +685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100348577}
   - component: {fileID: 100348576}
+  - component: {fileID: 100348578}
   m_Layer: 0
   m_Name: MainMusic
   m_TagString: Untagged
@@ -800,8 +801,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &100348578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100348575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc15e14128df6942ab81d76bea77c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalBGM: {fileID: 8300000, guid: 6875fb74f96a2014cae0dcedf7750a19, type: 3}
+  secretBGM: {fileID: 8300000, guid: 320e0a88f0ea31845a184ded6ce3606f, type: 3}
 --- !u!1001 &160013255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1234,7 +1249,7 @@ PrefabInstance:
     - target: {fileID: 5491622844142722743, guid: 9d283c1e75e08274693c6fad1e88c3b8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722743, guid: 9d283c1e75e08274693c6fad1e88c3b8,
         type: 3}
@@ -1477,7 +1492,7 @@ Transform:
   m_LocalScale: {x: 0.68222696, y: 0.8436775, z: 0.9}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &468258165
 GameObject:
@@ -6629,7 +6644,7 @@ Transform:
   m_LocalScale: {x: 0.68222696, y: 0.8436775, z: 0.9}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &536501820
 GameObject:
@@ -6797,7 +6812,7 @@ PrefabInstance:
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
       propertyPath: groundCheckLayers.m_Bits
-      value: 2576
+      value: 2560
       objectReference: {fileID: 0}
     - target: {fileID: 8627139149448695929, guid: bc96f94471430c64b8003b39e6296f28,
         type: 3}
@@ -6862,6 +6877,14 @@ PrefabInstance:
       propertyPath: parrySwing
       value: 
       objectReference: {fileID: 8300000, guid: 4db663346e712024baf8998d733ffee0, type: 3}
+    - target: {fileID: 814298480, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
+      propertyPath: hitStunLength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 814298480, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
+      propertyPath: parrySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fa7dcd4f7e369c40b6ee320746d8f61, type: 3}
     - target: {fileID: 814298481, guid: bc96f94471430c64b8003b39e6296f28, type: 3}
       propertyPath: m_Volume
       value: 0.45
@@ -10723,7 +10746,7 @@ PrefabInstance:
     - target: {fileID: 5491622844142722743, guid: 83e9e57d95d0e094589bb34aacf66d33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722743, guid: 83e9e57d95d0e094589bb34aacf66d33,
         type: 3}
@@ -11509,7 +11532,7 @@ PrefabInstance:
     - target: {fileID: 5491622844142722743, guid: b4d009ea0ce3c764cbf0eded87ecc147,
         type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 5491622844142722743, guid: b4d009ea0ce3c764cbf0eded87ecc147,
         type: 3}
@@ -13236,6 +13259,21 @@ PrefabInstance:
       propertyPath: parrySwing
       value: 
       objectReference: {fileID: 8300000, guid: 4db663346e712024baf8998d733ffee0, type: 3}
+    - target: {fileID: 5424962148079343683, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: hitStunLength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424962148079343683, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: parryEffectLifetime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424962148079343683, guid: 7ace19e087da8224cac495d95aa4cd0a,
+        type: 3}
+      propertyPath: parrySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fa7dcd4f7e369c40b6ee320746d8f61, type: 3}
     - target: {fileID: 2224656169433756513, guid: 7ace19e087da8224cac495d95aa4cd0a,
         type: 3}
       propertyPath: m_Volume
