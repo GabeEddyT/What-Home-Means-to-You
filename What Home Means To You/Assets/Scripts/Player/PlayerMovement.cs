@@ -58,11 +58,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (canMove)
         {
-            if (Input.GetKey(buttonSuite.left) && !GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Throw"))
+            if (Input.GetKey(buttonSuite.left))// && !GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Throw"))
             {
                 direction = -1;
             }
-            else if (Input.GetKey(buttonSuite.right) && !GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Throw"))
+            else if (Input.GetKey(buttonSuite.right))// && !GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Throw"))
             {
                 direction = 1;
             }
