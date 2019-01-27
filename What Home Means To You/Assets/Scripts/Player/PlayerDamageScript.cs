@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDamageScript : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class PlayerDamageScript : MonoBehaviour
     Coroutine parryRoutine;
     Animator animator;
     SpriteRenderer spriteRenderer;
-
+    public PlayerRageUI PlayerRageUIObj;
     private void Start()
     {
         buttonSuite = GetComponent<ControlButtons>();
@@ -76,6 +77,8 @@ public class PlayerDamageScript : MonoBehaviour
         rage = Mathf.Min(rage, 100f);
 
         audioSource.PlayOneShot(damageSound);
+
+        PlayerRageUIObj.AddRage(damage, this.gameObject);
 
         StartCoroutine(hitStun());
     }

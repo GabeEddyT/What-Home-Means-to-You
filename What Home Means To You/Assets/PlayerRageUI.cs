@@ -44,4 +44,19 @@ public class PlayerRageUI : MonoBehaviour
         }   
         
     }
+    public void AddRage(float numToAdd, GameObject playerBeingDamaged)
+    {
+        RageMeter += numToAdd;
+        if (RageMeter >= 100.0f)
+        {
+            if (playerBeingDamaged.gameObject.name.Contains("P1"))
+            {
+                Camera.main.gameObject.GetComponent<TwoPlayerCameraLogic>().PlayerWinCameraEffect(2);
+            }
+            else
+            {
+                Camera.main.gameObject.GetComponent<TwoPlayerCameraLogic>().PlayerWinCameraEffect(1);
+            }
+        }
+    }
 }
